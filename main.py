@@ -1,16 +1,43 @@
-# This is a sample Python script.
-
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def said_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
+# Function
+def said_hi():
+    # Use a breakpoint in the code line below to debug your script
+    print("Hola ¿Cual es tu nombre?")
+    name = input()
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+    return name
 
+
+class Dog:
+    def __init__(self, name, favorite_toy):
+        self.name = name
+        self.favorite_toy = favorite_toy
+
+    def play(self):
+        print(self.name + " is playing with the " + self.favorite_toy)
+
+
+class Person:
+    # Class example
+    def __init__(self, firstname, lastname, age, status):
+        self.firstname = firstname
+        self.lastname = lastname
+        self.age = age
+        self.status = status
+
+    def introduce(self):
+        print(f"my name is {self.firstname} {self.lastname} I am  {self.age} my status is {self.status}")
+
+
+Maria = Person(said_hi(), "Chavez", 90, True)
+Toy = Dog("toby", "ball")
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    said_hi('Javier Chavez Manzo')
+    # said_hi()
+    Maria.introduce()
+    Toy.play()
+
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
